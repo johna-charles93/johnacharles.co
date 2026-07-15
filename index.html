@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Johna Charles — Design, Software &amp; Growth</title>
+<meta name="description" content="Johna Charles — CEO of Orbit One, building Ohio Gas Supply and Roush Service Company. Web development, AI, marketing, and growth systems." />
+<link rel="canonical" href="https://johnacharles.co/" />
+<meta name="theme-color" content="#060608" />
+<meta name="robots" content="index, follow" />
+
+<!-- Open Graph / social previews -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://johnacharles.co/" />
+<meta property="og:site_name" content="Johna Charles" />
+<meta property="og:title" content="Johna Charles — Design, Software & Growth" />
+<meta property="og:description" content="CEO of Orbit One, building Ohio Gas Supply and Roush Service Company. Web development, AI, marketing, and growth systems." />
+<meta property="og:image" content="https://johnacharles.co/img/johna%20headshot.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Johna Charles — Design, Software & Growth" />
+<meta name="twitter:description" content="CEO of Orbit One, building Ohio Gas Supply and Roush Service Company. Web development, AI, marketing, and growth systems." />
+<meta name="twitter:image" content="https://johnacharles.co/img/johna%20headshot.jpg" />
+
+<link rel="preconnect" href="https://api.fontshare.com" />
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&f[]=satoshi@400,500,700,900&display=swap" />
+
+<link rel="icon" type="image/png" href="https://johnacharles.co/wp-content/uploads/2025/10/cropped-favicon-270x270.png" />
+<link rel="apple-touch-icon" href="https://johnacharles.co/wp-content/uploads/2025/10/cropped-favicon-270x270.png" />
+
+<link rel="stylesheet" href="styles.css" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Johna Charles",
+  "url": "https://johnacharles.co/",
+  "jobTitle": "CEO & Co-Founder, Orbit One",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Columbus",
+    "addressRegion": "OH",
+    "addressCountry": "US"
+  },
+  "sameAs": [
+    "https://www.linkedin.com/in/johnathan-charles/"
+  ],
+  "worksFor": [
+    { "@type": "Organization", "name": "Orbit One", "url": "https://weareorbit.co" },
+    { "@type": "Organization", "name": "Ohio Gas Supply", "url": "https://ohiogassupply.com" },
+    { "@type": "Organization", "name": "Roush Service Company", "url": "https://builtbyroush.com" }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- grain / noise overlay -->
+<div class="noise-overlay"></div>
+
+<!-- custom cursor -->
+<div class="cursor-dot"></div>
+<div class="cursor-ring"></div>
+
+<!-- preloader -->
+<div class="preloader" id="preloader">
+  <div class="preloader-inner">
+    <img src="img/logo-transparent.png" alt="Johna Charles" class="preloader-logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+    <span class="preloader-mark" style="display:none;">JC</span>
+    <div class="preloader-bar"><span id="preloaderFill"></span></div>
+    <span class="preloader-count" id="preloaderCount">0</span>
+  </div>
+</div>
+
+<!-- scroll progress -->
+<div class="scroll-progress"><span id="scrollProgressFill"></span></div>
+
+<!-- nav -->
+<header class="nav" id="mainNav">
+  <a href="#top" class="nav-logo">
+    <img src="img/logo-transparent.png" alt="Johna Charles" class="nav-logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex';" />
+    <span class="nav-logo-fallback" style="display:none;">JC<span>·</span></span>
+  </a>
+  <nav class="nav-links">
+    <a href="#companies" data-nav>Companies</a>
+    <a href="#services" data-nav>Services</a>
+    <a href="#work" data-nav>Work</a>
+    <a href="#experience" data-nav>Experience</a>
+    <a href="#contact" data-nav>Contact</a>
+  </nav>
+  <a href="#contact" class="nav-cta magnetic"><span>Say Hello</span></a>
+  <button class="nav-burger" id="navBurger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#companies">Companies</a>
+  <a href="#services">Services</a>
+  <a href="#work">Work</a>
+  <a href="#experience">Experience</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <canvas id="heroCanvas"></canvas>
+    <div class="hero-grid"></div>
+
+    <div class="hero-portrait reveal-up">
+      <img src="img/johna%20headshot.jpg" alt="Johna Charles" onerror="this.parentElement.style.display='none';" />
+    </div>
+
+    <div class="hero-content">
+      <p class="eyebrow reveal-up"><span class="dot"></span>Columbus, Ohio — Available for select projects</p>
+      <h1 class="hero-title">
+        <span class="split-line">Strategy meets</span>
+        <span class="split-line"><em>software.</em> Design meets</span>
+        <span class="split-line">precision engineering.</span>
+      </h1>
+      <p class="hero-sub reveal-up">
+        I build businesses and the systems that grow them. I'm Johna Charles — Co-Founder &amp; CEO of
+        <strong> Orbit One,</strong> owner of <strong>Ohio Gas Supply</strong>, and head of technology at
+        <strong> Roush Service Company.</strong>
+      </p>
+      <div class="hero-actions reveal-up">
+        <a href="#work" class="btn btn-primary magnetic"><span>View Selected Work</span></a>
+        <a href="#contact" class="btn btn-ghost magnetic"><span>Start a Project</span></a>
+      </div>
+    </div>
+
+    <div class="hero-stats">
+      <div class="stat">
+        <div class="stat-figure"><span class="stat-num" data-count="14">0</span><span class="stat-plus">+</span></div>
+        <span class="stat-label">Years Experience</span>
+      </div>
+      <div class="stat">
+        <div class="stat-figure"><span class="stat-num" data-count="120">0</span><span class="stat-plus">+</span></div>
+        <span class="stat-label">Projects Delivered</span>
+      </div>
+      <div class="stat">
+        <div class="stat-figure"><span class="stat-num" data-count="3">0</span></div>
+        <span class="stat-label">Active Ventures</span>
+      </div>
+    </div>
+
+    <div class="scroll-cue">
+      <span>Scroll</span>
+      <div class="scroll-cue-line"><i></i></div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <section class="marquee-section">
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>React</span><span>Next.js</span><span>Angular</span><span>Python</span><span>AI / LLM Integrations</span><span>Automation</span><span>Brand Strategy</span><span>SEO</span><span>3D Prototyping</span>
+        <span>React</span><span>Next.js</span><span>Angular</span><span>Python</span><span>AI / LLM Integrations</span><span>Automation</span><span>Brand Strategy</span><span>SEO</span><span>3D Prototyping</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <span class="ghost-num" aria-hidden="true" data-parallax>01</span>
+    <div class="section-head">
+      <span class="section-tag reveal-up">01 — About</span>
+      <h2 class="section-title reveal-up">Real problems.<br />Bold, engineered solutions.</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-side reveal-up">
+        <div class="about-portrait">
+          <img src="img/johna%20bar.jpg" alt="Johna Charles" onerror="this.style.display='none'; this.parentElement.classList.add('is-empty');" />
+        </div>
+        <ul class="about-list">
+          <li>AI &amp; Marketing Technology</li>
+          <li>SEO &amp; SEM</li>
+          <li>Web Design &amp; Engineering</li>
+          <li>Marketing Automation</li>
+          <li>3D Design &amp; Prototyping</li>
+        </ul>
+      </div>
+      <div class="about-copy reveal-up">
+        <p>I build businesses and the systems that grow them. As CEO of <strong>Orbit One</strong>, I lead a full-service digital agency at the intersection of AI, marketing, and technology — helping brands scale through SEO, SEM, automation, and high-performance web development.</p>
+        <p>Beyond the agency, I'm actively building <strong>Ohio Gas Supply</strong> and <strong>Roush Service Company</strong>. My focus has always been on results, but the tools have evolved — and I've evolved with them. Over a decade in, I'm more focused than ever on what's next.</p>
+        <p class="about-personal">Outside of client work, you'll find me deep in 3D printing and product design, tuning saltwater aquariums, or wrenching on German cars — the same precision engineering mindset, just off-screen.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPANIES -->
+  <section class="companies" id="companies">
+    <span class="ghost-num" aria-hidden="true" data-parallax>02</span>
+    <div class="section-head">
+      <span class="section-tag reveal-up">02 — Companies</span>
+      <h2 class="section-title reveal-up">Ventures I've built<br />and operate today.</h2>
+    </div>
+
+    <a class="company-panel reveal-up" data-tilt href="https://ohiogassupply.com" target="_blank" rel="noopener">
+      <div class="company-mark"><img src="https://ohiogassupply.com/assets/ogs-logo.png" alt="Ohio Gas Supply logo" loading="lazy" /></div>
+      <div class="company-body">
+        <span class="company-eyebrow">Owner &amp; Software Engineer</span>
+        <h3>Ohio Gas Supply</h3>
+        <p>A Columbus-based propane, CO₂, and welding gas supplier built on transparent pricing, real technology, and service that actually shows up — for warehouses, restaurants, and fabricators across central Ohio.</p>
+        <div class="company-tags"><span>Energy</span><span>Operations</span><span>Customer Systems</span></div>
+        <span class="company-link">ohiogassupply.com ↗</span>
+      </div>
+    </a>
+
+    <a class="company-panel reveal-up" data-tilt href="https://weareorbit.co" target="_blank" rel="noopener">
+      <div class="company-mark"><img src="https://weareorbit.co/wp-content/uploads/2025/06/OMG-Logo-White-w-Purple-Dot-1-scaled.png" alt="Orbit One logo" loading="lazy" /></div>
+      <div class="company-body">
+        <span class="company-eyebrow">Co-Founder &amp; Chief Executive</span>
+        <h3>Orbit One</h3>
+        <p>A Columbus web design &amp; digital marketing agency — websites, branding, SEO, and marketing automation for local businesses navigating the digital landscape. Where design discipline meets engineering rigor.</p>
+        <div class="company-tags"><span>Web Development</span><span>Brand</span><span>Automation</span></div>
+        <span class="company-link">weareorbit.co ↗</span>
+      </div>
+    </a>
+
+    <a class="company-panel reveal-up" data-tilt href="https://builtbyroush.com" target="_blank" rel="noopener">
+      <div class="company-mark"><img src="https://builtbyroush.com/img/logo-roush.png" alt="Roush Service Company logo" loading="lazy" /></div>
+      <div class="company-body">
+        <span class="company-eyebrow">Head of Technology &amp; Business Development</span>
+        <h3>Roush Service Company</h3>
+        <p>A 40+ year Central Ohio infrastructure provider serving water, gas, power, and telecommunications clients through three specialized divisions — DrillTek, BuryTek, and FiberTek.</p>
+        <div class="company-tags"><span>Infrastructure</span><span>Utilities</span><span>Telecom</span></div>
+        <span class="company-link">builtbyroush.com ↗</span>
+      </div>
+    </a>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <span class="ghost-num" aria-hidden="true" data-parallax>03</span>
+    <div class="section-head">
+      <span class="section-tag reveal-up">03 — Services</span>
+      <h2 class="section-title reveal-up">Specialized for<br />your business' growth.</h2>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal-up">
+        <span class="service-num">01</span>
+        <h3>Website Design &amp; Development</h3>
+        <p>Modern, conversion-driven sites built with React &amp; Next.js — fast, scalable, and engineered to elevate your presence.</p>
+      </div>
+      <div class="service-card reveal-up">
+        <span class="service-num">02</span>
+        <h3>Software &amp; AI Development</h3>
+        <p>Custom software, internal tools, and AI-powered integrations that automate real work and unlock leverage.</p>
+      </div>
+      <div class="service-card reveal-up">
+        <span class="service-num">03</span>
+        <h3>Brand Identity Design</h3>
+        <p>Build a brand that's memorable, trusted, and designed to convert — from mark to full visual system.</p>
+      </div>
+      <div class="service-card reveal-up">
+        <span class="service-num">04</span>
+        <h3>Marketing Automation</h3>
+        <p>Streamlined customer journeys that convert leads, nurture relationships, and maximize ROI on autopilot.</p>
+      </div>
+      <div class="service-card reveal-up">
+        <span class="service-num">05</span>
+        <h3>SEO + Digital Marketing</h3>
+        <p>Data-driven strategy that turns visibility into measurable growth, not vanity metrics.</p>
+      </div>
+      <div class="service-card reveal-up">
+        <span class="service-num">06</span>
+        <h3>3D Design &amp; Prototyping</h3>
+        <p>Turning ideas into tangible prototypes through precision 3D design and high-quality printing.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORK -->
+  <section class="work" id="work">
+    <span class="ghost-num" aria-hidden="true" data-parallax>04</span>
+    <div class="section-head">
+      <span class="section-tag reveal-up">04 — Selected Work</span>
+      <h2 class="section-title reveal-up">A few things<br />I've shipped.</h2>
+    </div>
+    <div class="work-grid">
+      <article class="work-card reveal-up" data-tilt>
+        <div class="work-media grad-1">
+          <img src="https://weareorbit.co/wp-content/uploads/2025/12/3.jpg" alt="Royal Concrete website" loading="lazy" onerror="this.remove()" />
+          <span class="work-year">2023 — Ongoing</span>
+        </div>
+        <div class="work-meta">
+          <span>SEO / Website Redesign</span>
+          <h3>Royal Concrete</h3>
+          <p class="work-blurb">Led the rebrand and SEO rollout that took Royal Concrete's conversion rate from 1.2% to 3.2% and organic traffic to 370+ sessions a month.</p>
+          <a class="work-link" href="https://weareorbit.co/result/royal-concrete/" target="_blank" rel="noopener">Read the case study on Orbit One ↗</a>
+        </div>
+      </article>
+
+      <article class="work-card reveal-up" data-tilt>
+        <div class="work-media grad-2">
+          <img src="https://weareorbit.co/wp-content/uploads/2025/12/2.jpg" alt="Safe Harbor Group website" loading="lazy" onerror="this.remove()" />
+          <span class="work-year">2024 — 2025</span>
+        </div>
+        <div class="work-meta">
+          <span>Brand &amp; Website / Healthcare</span>
+          <h3>Safe Harbor Group</h3>
+          <p class="work-blurb">Rebuilt a national healthcare compliance firm's digital presence end-to-end — new brand, new site, and an SEO foundation that hit a 90+ Core Web Vitals score.</p>
+          <a class="work-link" href="https://weareorbit.co/result/safe-harbor-group/" target="_blank" rel="noopener">Read the case study on Orbit One ↗</a>
+        </div>
+      </article>
+
+      <article class="work-card reveal-up" data-tilt>
+        <div class="work-media grad-3">
+          <img src="https://weareorbit.co/wp-content/uploads/2025/07/1.png" alt="The Roofing Guys website" loading="lazy" onerror="this.remove()" />
+          <span class="work-year">2024 — Ongoing</span>
+        </div>
+        <div class="work-meta">
+          <span>Local SEO</span>
+          <h3>The Roofing Guys</h3>
+          <p class="work-blurb">Ran a month-one SEO sprint that landed 200+ new keyword rankings and a top-3 local ranking in Gahanna within 30 days.</p>
+          <a class="work-link" href="https://weareorbit.co/result/the-roofing-guys/" target="_blank" rel="noopener">Read the case study on Orbit One ↗</a>
+        </div>
+      </article>
+
+      <article class="work-card reveal-up" data-tilt>
+        <div class="work-media grad-4">
+          <span class="work-year">In Active Development</span>
+        </div>
+        <div class="work-meta">
+          <span>Route &amp; Order Management — Ohio Gas Supply</span>
+          <h3>OGS Ops Platform</h3>
+          <p class="work-blurb">A custom app for Ohio Gas Supply handling route tracking, lead management, and order tracking in one system built for how the business actually runs.</p>
+        </div>
+      </article>
+
+      <article class="work-card reveal-up" data-tilt>
+        <div class="work-media grad-5">
+          <span class="work-year">In Active Development</span>
+        </div>
+        <div class="work-meta">
+          <span>Field Operations Platform — Roush Service Company</span>
+          <h3>Roush Service Connects</h3>
+          <p class="work-blurb">A custom field operations platform for Roush Service Company — project tracking, crew dispatch, documents, and invoicing, built for how infrastructure crews actually work.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="experience" id="experience">
+    <span class="ghost-num" aria-hidden="true" data-parallax>05</span>
+    <div class="section-head">
+      <span class="section-tag reveal-up">05 — Experience</span>
+      <h2 class="section-title reveal-up">Strategic. Technical.<br />Results-driven.</h2>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item reveal-up">
+        <span class="timeline-date">Mar 2026 — Present</span>
+        <div class="timeline-body"><h3>Head of Technology + Business Development</h3><p>Roush Service Co., Inc</p></div>
+      </div>
+      <div class="timeline-item reveal-up">
+        <span class="timeline-date">Jan 2026 — Present</span>
+        <div class="timeline-body"><h3>Owner - Software Engineer</h3><p>Ohio Gas Supply</p></div>
+      </div>
+      <div class="timeline-item reveal-up">
+        <span class="timeline-date">Jan 2021 — Present</span>
+        <div class="timeline-body"><h3>Co-Founder &amp; Chief Executive</h3><p>Orbit One</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECH -->
+  <section class="tech" id="tech">
+    <span class="ghost-num" aria-hidden="true" data-parallax>06</span>
+    <div class="section-head">
+      <span class="section-tag reveal-up">06 — Tools &amp; Tech</span>
+      <h2 class="section-title reveal-up">What powers<br />the work.</h2>
+    </div>
+    <div class="tech-grid reveal-up">
+      <span>React</span><span>Next.js</span><span>Angular</span><span>Python</span>
+      <span>TypeScript</span><span>Node.js</span><span>OpenAI / Claude APIs</span>
+      <span>Figma</span><span>Webflow</span><span>WordPress</span><span>Fusion 360</span><span>Zapier / Make</span>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials" id="testimonials">
+    <span class="ghost-num" aria-hidden="true" data-parallax>07</span>
+    <div class="section-head">
+      <span class="section-tag reveal-up">07 — Testimonials</span>
+      <h2 class="section-title reveal-up">What clients<br />are saying.</h2>
+    </div>
+    <div class="testimonial-track">
+      <div class="testimonial-card reveal-up">
+        <p>"Johna rebuilt our entire digital presence and automated our lead intake — response time went from days to minutes."</p>
+        <span class="t-name">Client Name</span><span class="t-role">CEO &amp; Founder</span>
+      </div>
+      <div class="testimonial-card reveal-up">
+        <p>"The level of craft is different. Every detail, from the code to the animation, felt intentional and premium."</p>
+        <span class="t-name">Client Name</span><span class="t-role">Operations Director</span>
+      </div>
+      <div class="testimonial-card reveal-up">
+        <p>"We came in needing a website. We left with a full growth system — automation, SEO, and a brand we're proud of."</p>
+        <span class="t-name">Client Name</span><span class="t-role">Marketing Lead</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact" data-num="08">
+    <canvas id="contactCanvas" class="contact-canvas"></canvas>
+    <span class="ghost-num" aria-hidden="true" data-parallax>08</span>
+
+    <div class="contact-layout">
+      <div class="contact-info reveal-up">
+        <div class="contact-photo">
+          <img src="img/johna%20headshot.jpg" alt="Johna Charles" onerror="this.style.display='none'; this.parentElement.style.display='none';" />
+        </div>
+        <span class="section-tag">08 — Contact</span>
+        <h2 class="contact-title">Let's build<br />something worth<br />remembering.</h2>
+        <p>Whether it's a product, a platform, or a full growth system — I'd love to hear what you're building.</p>
+
+        <ul class="contact-detail-list">
+          <li><span class="cdl-label">Location</span><span class="cdl-value">Columbus, Ohio</span></li>
+          <li><span class="cdl-label">Phone</span><span class="cdl-value">614-900-7567</span></li>
+          <li><span class="cdl-label">Social</span>
+            <span class="cdl-value cdl-links">
+              <a href="https://www.linkedin.com/in/johnathan-charles/" target="_blank" rel="noopener">LinkedIn ↗</a>
+              <a href="#" target="_blank" rel="noopener">GitHub ↗</a>
+            </span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="contact-form-wrap reveal-up">
+        <div class="contact-form-glow" aria-hidden="true"></div>
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="form-field">
+              <input type="text" id="cf-name" name="name" required autocomplete="name" placeholder=" " />
+              <label for="cf-name">Name</label>
+            </div>
+            <div class="form-field">
+              <input type="email" id="cf-email" name="email" required autocomplete="email" placeholder=" " />
+              <label for="cf-email">Email</label>
+            </div>
+          </div>
+          <div class="form-field">
+            <textarea id="cf-message" name="message" rows="5" required placeholder=" "></textarea>
+            <label for="cf-message">Tell me about your project</label>
+          </div>
+          <button type="submit" class="btn btn-primary magnetic" id="cfSubmit">
+            <span>Send Message <i class="btn-arrow">→</i></span>
+          </button>
+          <p class="form-status" id="cfStatus" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <span>© 2026 Johna Charles. All rights reserved.</span>
+  <a href="#top" class="footer-top magnetic">Back to top ↑</a>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://unpkg.com/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://unpkg.com/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
