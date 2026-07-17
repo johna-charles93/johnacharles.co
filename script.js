@@ -387,26 +387,30 @@
   }
 
   /* ---------------- Contact form ----------------
-     Sends via Web3Forms (https://web3forms.com) — free, no backend required,
-     submissions land straight in your inbox. To activate:
-       1. Go to https://web3forms.com, enter your email, get an access key
-          instantly (no signup/password).
-       2. Paste that key into WEB3FORMS_ACCESS_KEY below.
-     Until a real key is set, this automatically falls back to opening the
-     visitor's email client via mailto: so the form never silently fails. */
-  const WEB3FORMS_ACCESS_KEY = "YOUR_WEB3FORMS_ACCESS_KEY";
-
+     Posts to contact-handler.php, which lives alongside this file on your
+     GoDaddy hosting and sends the message via PHP's built-in mail() — no
+     third-party service, no API key. If that request fails for any reason
+     (PHP not reachable, server error, etc.), falls back to opening the
+     visitor's email client via mailto: so a message is never lost silently. */
   const contactForm = document.getElementById("contactForm");
   if (contactForm) {
     const cfStatus = document.getElementById("cfStatus");
     const cfSubmit = document.getElementById("cfSubmit");
-    const isConfigured = WEB3FORMS_ACCESS_KEY && WEB3FORMS_ACCESS_KEY !== "YOUR_WEB3FORMS_ACCESS_KEY";
+
+    function fallbackMailto(name, email, message) {
+      const subject = encodeURIComponent(`New project inquiry from ${name}`);
+      const body = encodeURIComponent(`${message}\n\n— ${name} (${email})`);
+      cfStatus.textContent = "Opening your email client…";
+      cfStatus.className = "form-status success";
+      window.location.href = `mailto:johnacharles93@gmail.com?subject=${subject}&body=${body}`;
+    }
 
     contactForm.addEventListener("submit", async (e) => {
       e.preventDefault();
       const name = document.getElementById("cf-name").value.trim();
       const email = document.getElementById("cf-email").value.trim();
       const message = document.getElementById("cf-message").value.trim();
+      const botField = document.querySelector('[name="bot-field"]').value;
 
       if (!name || !email || !message) {
         cfStatus.textContent = "Please fill out every field before sending.";
@@ -415,44 +419,22 @@
       }
 
       cfSubmit.disabled = true;
-
-      if (!isConfigured) {
-        // Fallback: no Web3Forms key set yet, open the visitor's email client.
-        const subject = encodeURIComponent(`New project inquiry from ${name}`);
-        const body = encodeURIComponent(`${message}\n\n— ${name} (${email})`);
-        cfStatus.textContent = "Opening your email client…";
-        cfStatus.className = "form-status success";
-        window.location.href = `mailto:johnacharles93@gmail.com?subject=${subject}&body=${body}`;
-        setTimeout(() => { cfSubmit.disabled = false; }, 1200);
-        return;
-      }
-
       cfStatus.textContent = "Sending…";
       cfStatus.className = "form-status";
 
       try {
-        const res = await fetch("https://api.web3forms.com/submit", {
+        const res = await fetch("contact-handler.php", {
           method: "POST",
-          headers: { "Content-Type": "application/json", Accept: "application/json" },
-          body: JSON.stringify({
-            access_key: WEB3FORMS_ACCESS_KEY,
-            name,
-            email,
-            message,
-            subject: `New project inquiry from ${name}`,
-          }),
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: new URLSearchParams({ name, email, message, "bot-field": botField }).toString(),
         });
         const data = await res.json();
-        if (data.success) {
-          cfStatus.textContent = "Message sent — I'll be in touch soon.";
-          cfStatus.className = "form-status success";
-          contactForm.reset();
-        } else {
-          throw new Error(data.message || "Submission failed");
-        }
+        if (!data.success) throw new Error(data.message || "Submission failed");
+        cfStatus.textContent = "We got it — I'll be in touch soon.";
+        cfStatus.className = "form-status success";
+        contactForm.reset();
       } catch (err) {
-        cfStatus.textContent = "Something went wrong — please email johnacharles93@gmail.com directly.";
-        cfStatus.className = "form-status error";
+        fallbackMailto(name, email, message);
       } finally {
         cfSubmit.disabled = false;
       }

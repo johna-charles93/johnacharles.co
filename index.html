@@ -9,6 +9,16 @@
 <meta name="theme-color" content="#060608" />
 <meta name="robots" content="index, follow" />
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N6Z1M8HF4M"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-N6Z1M8HF4M');
+</script>
+
 <!-- Open Graph / social previews -->
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://johnacharles.co/" />
@@ -328,6 +338,7 @@
           <span>Route &amp; Order Management — Ohio Gas Supply</span>
           <h3>OGS Ops Platform</h3>
           <p class="work-blurb">A custom app for Ohio Gas Supply handling route tracking, lead management, and order tracking in one system built for how the business actually runs.</p>
+          <a class="work-link" href="https://app.ohiogassupply.com/welcome" target="_blank" rel="noopener">Visit the live app ↗</a>
         </div>
       </article>
 
@@ -339,6 +350,7 @@
           <span>Field Operations Platform — Roush Service Company</span>
           <h3>Roush Service Connects</h3>
           <p class="work-blurb">A custom field operations platform for Roush Service Company — project tracking, crew dispatch, documents, and invoicing, built for how infrastructure crews actually work.</p>
+          <a class="work-link" href="https://app.builtbyroush.com/welcome" target="_blank" rel="noopener">Visit the live app ↗</a>
         </div>
       </article>
     </div>
@@ -391,15 +403,15 @@
     <div class="testimonial-track">
       <div class="testimonial-card reveal-up">
         <p>"Johna rebuilt our entire digital presence and automated our lead intake — response time went from days to minutes."</p>
-        <span class="t-name">Client Name</span><span class="t-role">CEO &amp; Founder</span>
+        <span class="t-name">Drew M.</span><span class="t-role">CEO &amp; Founder</span>
       </div>
       <div class="testimonial-card reveal-up">
         <p>"The level of craft is different. Every detail, from the code to the animation, felt intentional and premium."</p>
-        <span class="t-name">Client Name</span><span class="t-role">Operations Director</span>
+        <span class="t-name">Alex B.</span><span class="t-role">President &amp; Founder</span>
       </div>
       <div class="testimonial-card reveal-up">
         <p>"We came in needing a website. We left with a full growth system — automation, SEO, and a brand we're proud of."</p>
-        <span class="t-name">Client Name</span><span class="t-role">Marketing Lead</span>
+        <span class="t-name">Matt B.</span><span class="t-role">Owner Operator</span>
       </div>
     </div>
   </section>
@@ -432,7 +444,10 @@
 
       <div class="contact-form-wrap reveal-up">
         <div class="contact-form-glow" aria-hidden="true"></div>
-        <form class="contact-form" id="contactForm" novalidate>
+        <form class="contact-form" id="contactForm" name="contact" method="POST" novalidate>
+          <p class="hp-field" aria-hidden="true">
+            <label>Leave this field blank: <input name="bot-field" tabindex="-1" autocomplete="off" /></label>
+          </p>
           <div class="form-row">
             <div class="form-field">
               <input type="text" id="cf-name" name="name" required autocomplete="name" placeholder=" " />
