@@ -397,9 +397,9 @@
     const cfStatus = document.getElementById("cfStatus");
     const cfSubmit = document.getElementById("cfSubmit");
 
-    function fallbackMailto(name, email, message) {
+    function fallbackMailto(name, email, message, phone) {
       const subject = encodeURIComponent(`New project inquiry from ${name}`);
-      const body = encodeURIComponent(`${message}\n\n— ${name} (${email})`);
+      const body = encodeURIComponent(`${message}\n\n— ${name} (${email})${phone ? `\nPhone: ${phone}` : ""}`);
       cfStatus.textContent = "Opening your email client…";
       cfStatus.className = "form-status success";
       window.location.href = `mailto:johnacharles93@gmail.com?subject=${subject}&body=${body}`;
@@ -409,11 +409,12 @@
       e.preventDefault();
       const name = document.getElementById("cf-name").value.trim();
       const email = document.getElementById("cf-email").value.trim();
+      const phone = document.getElementById("cf-phone").value.trim();
       const message = document.getElementById("cf-message").value.trim();
       const botField = document.querySelector('[name="bot-field"]').value;
 
       if (!name || !email || !message) {
-        cfStatus.textContent = "Please fill out every field before sending.";
+        cfStatus.textContent = "Please enter your name, email, and project details before sending.";
         cfStatus.className = "form-status error";
         return;
       }
@@ -426,7 +427,7 @@
         const res = await fetch("contact-handler.php", {
           method: "POST",
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
-          body: new URLSearchParams({ name, email, message, "bot-field": botField }).toString(),
+          body: new URLSearchParams({ name, email, phone, message, "bot-field": botField }).toString(),
         });
         const data = await res.json();
         if (!data.success) throw new Error(data.message || "Submission failed");
@@ -434,7 +435,7 @@
         cfStatus.className = "form-status success";
         contactForm.reset();
       } catch (err) {
-        fallbackMailto(name, email, message);
+        fallbackMailto(name, email, message, phone);
       } finally {
         cfSubmit.disabled = false;
       }

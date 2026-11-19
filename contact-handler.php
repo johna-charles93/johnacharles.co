@@ -21,6 +21,7 @@ $recipient = 'johnacharles93@gmail.com';
 
 $name    = isset($_POST['name']) ? trim(strip_tags($_POST['name'])) : '';
 $email   = isset($_POST['email']) ? trim(strip_tags($_POST['email'])) : '';
+$phone   = isset($_POST['phone']) ? trim(strip_tags($_POST['phone'])) : '';
 $message = isset($_POST['message']) ? trim(strip_tags($_POST['message'])) : '';
 $botField = isset($_POST['bot-field']) ? trim($_POST['bot-field']) : '';
 
@@ -33,7 +34,7 @@ if ($botField !== '') {
 
 if ($name === '' || $email === '' || $message === '') {
     http_response_code(400);
-    echo json_encode(['success' => false, 'message' => 'All fields are required.']);
+    echo json_encode(['success' => false, 'message' => 'Name, email, and project details are required.']);
     exit;
 }
 
@@ -45,6 +46,9 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 
 $subject = "New project inquiry from $name";
 $body = "$message\r\n\r\n— $name ($email)";
+if ($phone !== '') {
+    $body .= "\r\nPhone: $phone";
+}
 
 // Reply-To is the visitor's address so you can just hit "Reply" in your inbox.
 // From must be a johnacharles.co address for best deliverability with GoDaddy mail.
