@@ -37,7 +37,7 @@
 <link rel="icon" type="image/png" href="https://johnacharles.co/wp-content/uploads/2025/10/cropped-favicon-270x270.png" />
 <link rel="apple-touch-icon" href="https://johnacharles.co/wp-content/uploads/2025/10/cropped-favicon-270x270.png" />
 
-<link rel="stylesheet" href="styles.css?v=20261119" />
+<link rel="stylesheet" href="styles.css?v=20261119b" />
 
 <script type="application/ld+json">
 {
@@ -71,16 +71,6 @@
 <!-- custom cursor -->
 <div class="cursor-dot"></div>
 <div class="cursor-ring"></div>
-
-<!-- preloader -->
-<div class="preloader" id="preloader">
-  <div class="preloader-inner">
-    <img src="img/logo-transparent.png" alt="Johna Charles" class="preloader-logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
-    <span class="preloader-mark" style="display:none;">JC</span>
-    <div class="preloader-bar"><span id="preloaderFill"></span></div>
-    <span class="preloader-count" id="preloaderCount">0</span>
-  </div>
-</div>
 
 <!-- scroll progress -->
 <div class="scroll-progress"><span id="scrollProgressFill"></span></div>
@@ -126,7 +116,7 @@
     </div>
 
     <div class="hero-content">
-      <p class="eyebrow reveal-up"><span class="dot"></span>Columbus, Ohio — Available for select projects</p>
+      <p class="eyebrow reveal-up"><span class="dot"></span>Columbus, Ohio — Open to operations, revenue &amp; technology leadership roles</p>
       <h1 class="hero-title">
         <span class="split-line">Strategy meets</span>
         <span class="split-line"><em>software.</em> Design meets</span>
@@ -140,7 +130,7 @@
       </p>
       <div class="hero-actions reveal-up">
         <a href="#work" class="btn btn-primary magnetic"><span>View Selected Work</span></a>
-        <a href="#contact" class="btn btn-ghost magnetic"><span>Start a Project</span></a>
+        <a href="#contact" class="btn btn-ghost magnetic"><span>Let's Talk</span></a>
       </div>
     </div>
 
@@ -249,8 +239,8 @@
   <section class="services" id="services">
     <span class="ghost-num" aria-hidden="true" data-parallax>03</span>
     <div class="section-head">
-      <span class="section-tag reveal-up">03 — Services</span>
-      <h2 class="section-title reveal-up">Specialized for<br />your business' growth.</h2>
+      <span class="section-tag reveal-up">03 — What I Bring</span>
+      <h2 class="section-title reveal-up">Skills I bring<br />to your team.</h2>
     </div>
     <div class="services-grid">
       <div class="service-card reveal-up">
@@ -294,7 +284,7 @@
       <h2 class="section-title reveal-up">A few things<br />I've shipped.</h2>
     </div>
     <div class="work-grid">
-      <article class="work-card reveal-up" data-tilt>
+      <article class="work-card reveal-up" data-tilt data-case="royal">
         <div class="work-media grad-1">
           <img src="img/jc-work-royal-concrete.jpg" alt="Royal Concrete website" loading="lazy" onerror="this.remove()" />
           <span class="work-year">2023 — Ongoing</span>
@@ -303,11 +293,11 @@
           <span>SEO / Website Redesign</span>
           <h3>Royal Concrete</h3>
           <p class="work-blurb">Led the rebrand and SEO rollout that took Royal Concrete's conversion rate from 1.2% to 3.2% and organic traffic to 370+ sessions a month.</p>
-          <a class="work-link" href="https://weareorbit.co/result/royal-concrete/" target="_blank" rel="noopener">Read the case study on Orbit One ↗</a>
+          <button type="button" class="work-link work-open">View case study <i>→</i></button>
         </div>
       </article>
 
-      <article class="work-card reveal-up" data-tilt>
+      <article class="work-card reveal-up" data-tilt data-case="safeharbor">
         <div class="work-media grad-2">
           <img src="img/jc-work-safe-harbor.jpg" alt="Safe Harbor Group website" loading="lazy" onerror="this.remove()" />
           <span class="work-year">2024 — 2025</span>
@@ -316,11 +306,11 @@
           <span>Brand &amp; Website / Healthcare</span>
           <h3>Safe Harbor Group</h3>
           <p class="work-blurb">Rebuilt a national healthcare compliance firm's digital presence end-to-end — new brand, new site, and an SEO foundation that hit a 90+ Core Web Vitals score.</p>
-          <a class="work-link" href="https://weareorbit.co/result/safe-harbor-group/" target="_blank" rel="noopener">Read the case study on Orbit One ↗</a>
+          <button type="button" class="work-link work-open">View case study <i>→</i></button>
         </div>
       </article>
 
-      <article class="work-card reveal-up" data-tilt>
+      <article class="work-card reveal-up" data-tilt data-case="roofing">
         <div class="work-media grad-3">
           <img src="img/jc-work-roofing-guys.jpg" alt="The Roofing Guys website" loading="lazy" onerror="this.remove()" />
           <span class="work-year">2024 — Ongoing</span>
@@ -329,11 +319,11 @@
           <span>Local SEO</span>
           <h3>The Roofing Guys</h3>
           <p class="work-blurb">Ran a month-one SEO sprint that landed 200+ new keyword rankings and a top-3 local ranking in Gahanna within 30 days.</p>
-          <a class="work-link" href="https://weareorbit.co/result/the-roofing-guys/" target="_blank" rel="noopener">Read the case study on Orbit One ↗</a>
+          <button type="button" class="work-link work-open">View case study <i>→</i></button>
         </div>
       </article>
 
-      <article class="work-card reveal-up" data-tilt>
+      <article class="work-card reveal-up" data-tilt data-case="ogs">
         <div class="work-media grad-4">
           <svg class="work-art" viewBox="0 0 400 180" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
             <defs><linearGradient id="ogsRoute" x1="0" x2="1"><stop offset="0" stop-color="#f0d9a8"/><stop offset="1" stop-color="#ff9a4a"/></linearGradient></defs>
@@ -351,11 +341,11 @@
           <span>Route &amp; Order Management — Ohio Gas Supply</span>
           <h3>OGS Ops Platform</h3>
           <p class="work-blurb">A custom app for Ohio Gas Supply handling route tracking, lead management, and order tracking in one system built for how the business actually runs.</p>
-          <a class="work-link" href="https://app.ohiogassupply.com/welcome" target="_blank" rel="noopener">Visit the live app ↗</a>
+          <button type="button" class="work-link work-open">View case study <i>→</i></button>
         </div>
       </article>
 
-      <article class="work-card reveal-up" data-tilt>
+      <article class="work-card reveal-up" data-tilt data-case="connects">
         <div class="work-media grad-5">
           <svg class="work-art" viewBox="0 0 400 180" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
             <g transform="translate(40 26)">
@@ -373,11 +363,11 @@
           <span>Field Operations Platform — Roush Service Company</span>
           <h3>Roush Service Connects</h3>
           <p class="work-blurb">A custom field operations platform for Roush Service Company — project tracking, crew dispatch, documents, and invoicing, built for how infrastructure crews actually work.</p>
-          <a class="work-link" href="https://app.builtbyroush.com/welcome" target="_blank" rel="noopener">Visit the live app ↗</a>
+          <button type="button" class="work-link work-open">View case study <i>→</i></button>
         </div>
       </article>
 
-      <article class="work-card reveal-up" data-tilt>
+      <article class="work-card reveal-up" data-tilt data-case="compliance">
         <div class="work-media grad-6">
           <svg class="work-art" viewBox="0 0 400 180" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
             <g transform="translate(60 22)">
@@ -400,11 +390,11 @@
           <span>Compliance Management — Roush Service Company</span>
           <h3>Roush Compliance</h3>
           <p class="work-blurb">An internal compliance system that keeps crew certifications, safety documentation, and job-site requirements tracked in one place — so audits and renewals never sneak up on the field team.</p>
-          <span class="work-private">Internal tool · Not publicly available</span>
+          <div class="work-actions"><button type="button" class="work-link work-open">Learn more <i>→</i></button><span class="work-private">Internal tool · Not public</span></div>
         </div>
       </article>
 
-      <article class="work-card reveal-up" data-tilt>
+      <article class="work-card reveal-up" data-tilt data-case="billing">
         <div class="work-media grad-7">
           <svg class="work-art" viewBox="0 0 400 180" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
             <g transform="translate(40 30)">
@@ -429,7 +419,7 @@
           <span>Reverse Billing — Roush Service Company</span>
           <h3>Roush Reverse Billing</h3>
           <p class="work-blurb">An internal billing workflow that turns completed field work into accurate, client-ready invoices automatically — cutting manual reconciliation and getting crews paid faster.</p>
-          <span class="work-private">Internal tool · Not publicly available</span>
+          <div class="work-actions"><button type="button" class="work-link work-open">Learn more <i>→</i></button><span class="work-private">Internal tool · Not public</span></div>
         </div>
       </article>
     </div>
@@ -543,15 +533,15 @@
     <div class="testimonial-track">
       <div class="testimonial-card reveal-up">
         <p>"Johna rebuilt our entire digital presence and automated our lead intake — response time went from days to minutes."</p>
-        <span class="t-name">Drew M.</span><span class="t-role">CEO &amp; Founder</span>
+        <span class="t-name">Drew McCormick</span><span class="t-role">CEO &amp; Founder, Reliant Exteriors</span>
       </div>
       <div class="testimonial-card reveal-up">
         <p>"The level of craft is different. Every detail, from the code to the animation, felt intentional and premium."</p>
-        <span class="t-name">Alex B.</span><span class="t-role">President &amp; Founder</span>
+        <span class="t-name">Alex Bagalia</span><span class="t-role">President &amp; Founder, Youngstown Landscape &amp; Design</span>
       </div>
       <div class="testimonial-card reveal-up">
         <p>"We came in needing a website. We left with a full growth system — automation, SEO, and a brand we're proud of."</p>
-        <span class="t-name">Matt B.</span><span class="t-role">Owner Operator</span>
+        <span class="t-name">Parker Steele</span><span class="t-role">Property Support Company</span>
       </div>
     </div>
   </section>
@@ -568,11 +558,11 @@
         </div>
         <span class="section-tag">09 — Contact</span>
         <h2 class="contact-title">Let's build<br />something worth<br />remembering.</h2>
-        <p>Whether it's a product, a platform, or a full growth system — I'd love to hear what you're building.</p>
+        <p>Hiring for operations, revenue, or technology leadership — or need someone who can run the business side and build the systems behind it? I'd love to talk.</p>
 
         <ul class="contact-detail-list">
           <li><span class="cdl-label">Location</span><span class="cdl-value">Columbus, Ohio</span></li>
-          <li><span class="cdl-label">Phone</span><span class="cdl-value">614-900-7567</span></li>
+          <li><span class="cdl-label">Phone</span><span class="cdl-value"><button type="button" class="phone-reveal" id="phoneReveal" data-p1="614" data-p2="900" data-p3="7567">Show phone number</button></span></li>
           <li><span class="cdl-label">Social</span>
             <span class="cdl-value cdl-links">
               <a href="https://www.linkedin.com/in/johnathan-charles/" target="_blank" rel="noopener">LinkedIn ↗</a>
@@ -604,7 +594,7 @@
           </div>
           <div class="form-field">
             <textarea id="cf-message" name="message" rows="5" required placeholder=" "></textarea>
-            <label for="cf-message">Tell me about your project</label>
+            <label for="cf-message">Tell me about the role or project</label>
           </div>
           <button type="submit" class="btn btn-primary magnetic" id="cfSubmit">
             <span>Send Message <i class="btn-arrow">→</i></span>
@@ -617,6 +607,98 @@
 
 </main>
 
+
+<!-- case study popup -->
+<dialog class="case-modal" id="caseModal" aria-labelledby="caseModalTitle" data-lenis-prevent>
+  <button type="button" class="case-close" id="caseClose" aria-label="Close">×</button>
+  <div class="case-media" id="caseMedia"></div>
+  <div class="case-body" id="caseBody"></div>
+</dialog>
+<template id="case-royal">
+  <span class="case-eyebrow">SEO / Website Redesign · 2023 — Ongoing</span>
+  <h3 class="case-title">Royal Concrete</h3>
+  <p class="case-lede">A Columbus concrete contractor — driveways, patios, foundations, and decorative work — whose website was holding the business back.</p>
+  <div class="case-stats"><div class="case-stat"><strong>3.2%</strong><span>conversion rate, up from 1.2%</span></div><div class="case-stat"><strong>370+</strong><span>organic sessions a month</span></div><div class="case-stat"><strong>Phase 1</strong><span>SEO foundation live</span></div></div>
+  <div class="case-cols">
+    <div><h4>The challenge</h4><p>An outdated site with little online visibility, almost no keyword rankings, slow load times, and a conversion rate that left leads on the table.</p></div>
+    <div><h4>What I did</h4><ul><li>Led a full rebrand and website redesign, built mobile-first and accessible</li><li>Custom WordPress build with clear conversion points and service showcases</li><li>Phase 1 SEO: new service and service-area pages, on-page optimization, a project gallery, and technical SEO</li></ul></div>
+  </div>
+  <p class="case-role"><span>My role</span>Led strategy, brand, and the SEO rollout from kickoff through launch.</p>
+  <div class="case-actions"><a class="btn btn-primary" href="https://weareorbit.co/result/royal-concrete/" target="_blank" rel="noopener"><span>Full case study on Orbit One ↗</span></a><a class="btn btn-ghost" href="https://weareorbit.co" target="_blank" rel="noopener"><span>About Orbit One</span></a></div>
+</template>
+<template id="case-safeharbor">
+  <span class="case-eyebrow">Brand &amp; Website / Healthcare · 2024 — 2025</span>
+  <h3 class="case-title">Safe Harbor Group</h3>
+  <p class="case-lede">A national healthcare compliance, investigations, and audit defense firm based in Columbus.</p>
+  <div class="case-stats"><div class="case-stat"><strong>90+</strong><span>Core Web Vitals performance score</span></div><div class="case-stat"><strong>2×+</strong><span>conversion rate after relaunch</span></div><div class="case-stat"><strong>New</strong><span>brand, domain &amp; site</span></div></div>
+  <div class="case-cols">
+    <div><h4>The challenge</h4><p>Inconsistent branding, a site that didn't reflect the depth of their services, no organic visibility, a 1.1% conversion rate, and slow performance.</p></div>
+    <div><h4>What I did</h4><ul><li>Full rebrand and migration from ccghealthcare.com to safehg.com</li><li>Custom UI/UX and WordPress development built for speed, accessibility, and conversion</li><li>Launch SEO: service-page optimization, technical SEO (indexing, redirects, metadata, sitemaps, schema), and keyword strategy</li></ul></div>
+  </div>
+  <p class="case-role"><span>My role</span>Led the rebrand, site architecture, and launch SEO end-to-end.</p>
+  <div class="case-actions"><a class="btn btn-primary" href="https://weareorbit.co/result/safe-harbor-group/" target="_blank" rel="noopener"><span>Full case study on Orbit One ↗</span></a><a class="btn btn-ghost" href="https://weareorbit.co" target="_blank" rel="noopener"><span>About Orbit One</span></a></div>
+</template>
+<template id="case-roofing">
+  <span class="case-eyebrow">Local SEO · 2024 — Ongoing</span>
+  <h3 class="case-title">The Roofing Guys</h3>
+  <p class="case-lede">A Columbus-area roofing contractor that needed to show up when homeowners searched for a roofer.</p>
+  <div class="case-stats"><div class="case-stat"><strong>200+</strong><span>new &amp; improved keyword rankings</span></div><div class="case-stat"><strong>Top 3</strong><span>local ranking in Gahanna</span></div><div class="case-stat"><strong>30 days</strong><span>to first-page results</span></div></div>
+  <div class="case-cols">
+    <div><h4>The challenge</h4><p>Weak local visibility in a crowded market where "roofer near me" searches decide who gets the call.</p></div>
+    <div><h4>What I did</h4><ul><li>Month-one SEO sprint: on-page optimization across core service pages</li><li>New blog content — several posts ranking on page 1 right away</li><li>Google Business Profile optimization for core service areas</li></ul></div>
+  </div>
+  <p class="case-role"><span>My role</span>Ran the SEO strategy and sprint execution.</p>
+  <div class="case-actions"><a class="btn btn-primary" href="https://weareorbit.co/result/the-roofing-guys/" target="_blank" rel="noopener"><span>Full case study on Orbit One ↗</span></a><a class="btn btn-ghost" href="https://weareorbit.co" target="_blank" rel="noopener"><span>About Orbit One</span></a></div>
+</template>
+<template id="case-ogs">
+  <span class="case-eyebrow">Route &amp; Order Management · In Active Development</span>
+  <h3 class="case-title">OGS Ops Platform</h3>
+  <p class="case-lede">The operating system for Ohio Gas Supply — a Columbus propane, CO₂, and welding gas supplier.</p>
+  <div class="case-stats"><div class="case-stat"><strong>1</strong><span>system for routes, leads &amp; orders</span></div><div class="case-stat"><strong>Auto</strong><span>ready-to-invoice notifications</span></div><div class="case-stat"><strong>Live</strong><span>in daily operations</span></div></div>
+  <div class="case-cols">
+    <div><h4>The challenge</h4><p>Routes, leads, and orders lived in separate tools and spreadsheets, which made deliveries harder to track and slowed down invoicing.</p></div>
+    <div><h4>What I did</h4><ul><li>Designed and built a custom web app for route tracking, lead management, and order tracking</li><li>Delivery completion flow that flags orders as ready to invoice and emails the team automatically</li><li>Accounting workflow that keeps the books in sync with completed deliveries</li></ul></div>
+  </div>
+  <p class="case-role"><span>My role</span>Co-owner — product owner, designer, and engineer.</p>
+  <div class="case-actions"><a class="btn btn-primary" href="https://app.ohiogassupply.com/welcome" target="_blank" rel="noopener"><span>Visit the live app ↗</span></a><a class="btn btn-ghost" href="https://ohiogassupply.com" target="_blank" rel="noopener"><span>Learn more about Ohio Gas Supply ↗</span></a></div>
+</template>
+<template id="case-connects">
+  <span class="case-eyebrow">Field Operations Platform · In Active Development</span>
+  <h3 class="case-title">Roush Service Connects</h3>
+  <p class="case-lede">A field operations platform for Roush Service Company, a 40+ year Central Ohio infrastructure provider.</p>
+  <div class="case-stats"><div class="case-stat"><strong>3</strong><span>divisions on one platform</span></div><div class="case-stat"><strong>End-to-end</strong><span>project → dispatch → invoice</span></div><div class="case-stat"><strong>Built</strong><span>for crews in the field</span></div></div>
+  <div class="case-cols">
+    <div><h4>The challenge</h4><p>Project details, crew schedules, documents, and billing were spread across people and paperwork across three divisions — DrillTek, BuryTek, and FiberTek.</p></div>
+    <div><h4>What I did</h4><ul><li>Project tracking from bid to closeout</li><li>Crew dispatch and scheduling</li><li>Centralized job documents and invoicing</li></ul></div>
+  </div>
+  <p class="case-role"><span>My role</span>Director of Technology &amp; Business Development — product lead and builder.</p>
+  <div class="case-actions"><a class="btn btn-primary" href="https://app.builtbyroush.com/welcome" target="_blank" rel="noopener"><span>Visit the live app ↗</span></a><a class="btn btn-ghost" href="https://builtbyroush.com" target="_blank" rel="noopener"><span>Learn more about Roush ↗</span></a></div>
+</template>
+<template id="case-compliance">
+  <span class="case-eyebrow">Compliance Management · Internal Tool</span>
+  <h3 class="case-title">Roush Compliance</h3>
+  <p class="case-lede">An internal system that keeps Roush's field compliance organized and audit-ready. It isn't public, so here's an overview.</p>
+  <div class="case-stats"><div class="case-stat"><strong>1</strong><span>place for certs &amp; safety docs</span></div><div class="case-stat"><strong>Proactive</strong><span>renewal tracking</span></div><div class="case-stat"><strong>Audit</strong><span>ready at any time</span></div></div>
+  <div class="case-cols">
+    <div><h4>The challenge</h4><p>Crew certifications, safety documentation, and job-site requirements were tracked by hand, which made renewals and audits easy to miss.</p></div>
+    <div><h4>What I did</h4><ul><li>Central record of crew certifications and safety documentation</li><li>Tracking for job-site requirements and upcoming renewals</li><li>Built to fit how Roush's field teams already work</li></ul></div>
+  </div>
+  <p class="case-role"><span>My role</span>Product lead and builder.</p>
+  <div class="case-actions"><a class="btn btn-primary" href="https://builtbyroush.com" target="_blank" rel="noopener"><span>Learn more about Roush ↗</span></a></div>
+</template>
+<template id="case-billing">
+  <span class="case-eyebrow">Reverse Billing · Internal Tool</span>
+  <h3 class="case-title">Roush Reverse Billing</h3>
+  <p class="case-lede">An internal workflow that turns completed field work into accurate, client-ready invoices. It isn't public, so here's an overview.</p>
+  <div class="case-stats"><div class="case-stat"><strong>Auto</strong><span>field work → invoice</span></div><div class="case-stat"><strong>Less</strong><span>manual reconciliation</span></div><div class="case-stat"><strong>Faster</strong><span>billing cycles</span></div></div>
+  <div class="case-cols">
+    <div><h4>The challenge</h4><p>Turning completed field work into invoices meant manual reconciliation, which slowed billing and invited errors.</p></div>
+    <div><h4>What I did</h4><ul><li>Billing workflow that builds invoices straight from completed field work</li><li>Checks that catch mismatches before anything goes to the client</li><li>Built to plug into Roush's existing operations</li></ul></div>
+  </div>
+  <p class="case-role"><span>My role</span>Product lead and builder.</p>
+  <div class="case-actions"><a class="btn btn-primary" href="https://builtbyroush.com" target="_blank" rel="noopener"><span>Learn more about Roush ↗</span></a></div>
+</template>
+
 <footer class="footer">
   <span>© 2026 Johna Charles. All rights reserved.</span>
   <a href="#top" class="footer-top magnetic">Back to top ↑</a>
@@ -626,6 +708,6 @@
 <script src="https://unpkg.com/gsap@3.12.5/dist/gsap.min.js"></script>
 <script src="https://unpkg.com/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
-<script src="script.js?v=20261119-phone"></script>
+<script src="script.js?v=20261119b-phone"></script>
 </body>
 </html>

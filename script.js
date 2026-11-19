@@ -10,36 +10,6 @@
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const isTouch = window.matchMedia("(hover: none), (pointer: coarse)").matches;
 
-  /* ---------------- Preloader ---------------- */
-  const preloader = document.getElementById("preloader");
-  const preloaderFill = document.getElementById("preloaderFill");
-  const preloaderCount = document.getElementById("preloaderCount");
-
-  let progress = 0;
-  const preloadTimer = setInterval(() => {
-    progress += Math.random() * 18;
-    if (progress >= 100) progress = 100;
-    preloaderFill.style.width = progress + "%";
-    preloaderCount.textContent = Math.floor(progress);
-    if (progress === 100) {
-      clearInterval(preloadTimer);
-      setTimeout(() => {
-        preloader.classList.add("done");
-        document.body.classList.add("loaded");
-        initSplitLines();
-        initReveals();
-      }, 250);
-    }
-  }, 90);
-
-  // hard fallback so preloader never traps the user
-  setTimeout(() => {
-    if (!preloader.classList.contains("done")) {
-      preloader.classList.add("done");
-      document.body.classList.add("loaded");
-    }
-  }, 3200);
-
   /* ---------------- Smooth scroll (Lenis) ---------------- */
   let lenis = null;
   if (!reduceMotion && window.Lenis) {
@@ -59,6 +29,11 @@
   if (window.gsap && window.ScrollTrigger) {
     gsap.registerPlugin(ScrollTrigger);
   }
+
+  /* ---------------- Page entrance (no preloader) ---------------- */
+  document.body.classList.add("loaded");
+  initSplitLines();
+  initReveals();
 
   /* ---------------- Custom cursor ---------------- */
   const cursorDot = document.querySelector(".cursor-dot");
@@ -398,7 +373,7 @@
     const cfSubmit = document.getElementById("cfSubmit");
 
     function fallbackMailto(name, email, message, phone) {
-      const subject = encodeURIComponent(`New project inquiry from ${name}`);
+      const subject = encodeURIComponent(`New inquiry from ${name}`);
       const body = encodeURIComponent(`${message}\n\n— ${name} (${email})${phone ? `\nPhone: ${phone}` : ""}`);
       cfStatus.textContent = "Opening your email client…";
       cfStatus.className = "form-status success";
@@ -431,7 +406,7 @@
         });
         const data = await res.json();
         if (!data.success) throw new Error(data.message || "Submission failed");
-        cfStatus.textContent = "We got it — I'll be in touch soon.";
+        cfStatus.textContent = "Got it — I'll be in touch soon.";
         cfStatus.className = "form-status success";
         contactForm.reset();
       } catch (err) {
@@ -439,6 +414,64 @@
       } finally {
         cfSubmit.disabled = false;
       }
+    });
+  }
+
+  /* ---------------- Case study popups ---------------- */
+  const caseModal = document.getElementById("caseModal");
+  if (caseModal && typeof caseModal.showModal === "function") {
+    const caseBody = document.getElementById("caseBody");
+    const caseMedia = document.getElementById("caseMedia");
+    let lastCard = null;
+
+    function openCase(card) {
+      const tpl = document.getElementById("case-" + card.dataset.case);
+      if (!tpl) return;
+      caseBody.replaceChildren(tpl.content.cloneNode(true));
+      const title = caseBody.querySelector(".case-title");
+      if (title) title.id = "caseModalTitle";
+      caseMedia.replaceChildren();
+      const media = card.querySelector(".work-media");
+      if (media) {
+        caseMedia.className = "case-media " + [...media.classList].filter((c) => c.startsWith("grad-")).join(" ");
+        media.querySelectorAll("img, svg").forEach((el) => caseMedia.appendChild(el.cloneNode(true)));
+      }
+      lastCard = card;
+      caseModal.showModal();
+      caseModal.scrollTop = 0;
+      document.body.classList.add("modal-open");
+      if (lenis) lenis.stop();
+      if (window.gtag) gtag("event", "case_study_open", { case_id: card.dataset.case });
+    }
+
+    document.querySelectorAll(".work-card[data-case]").forEach((card) => {
+      card.addEventListener("click", (e) => {
+        if (e.target.closest("a")) return;
+        openCase(card);
+      });
+    });
+
+    document.getElementById("caseClose").addEventListener("click", () => caseModal.close());
+    caseModal.addEventListener("click", (e) => { if (e.target === caseModal) caseModal.close(); });
+    caseModal.addEventListener("close", () => {
+      document.body.classList.remove("modal-open");
+      if (lenis) lenis.start();
+      const btn = lastCard && lastCard.querySelector(".work-open");
+      if (btn) btn.focus({ preventScroll: true });
+    });
+  }
+
+  /* ---------------- Phone reveal ---------------- */
+  const phoneReveal = document.getElementById("phoneReveal");
+  if (phoneReveal) {
+    phoneReveal.addEventListener("click", () => {
+      const d = phoneReveal.dataset;
+      const pretty = `${d.p1}-${d.p2}-${d.p3}`;
+      const a = document.createElement("a");
+      a.href = `tel:+1${d.p1}${d.p2}${d.p3}`;
+      a.textContent = pretty;
+      phoneReveal.replaceWith(a);
+      if (window.gtag) gtag("event", "phone_reveal");
     });
   }
 
