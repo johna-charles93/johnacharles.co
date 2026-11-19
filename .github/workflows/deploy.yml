@@ -21,6 +21,9 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ftp
           port: 21
+          # GoDaddy's FTP server can be slow to answer; allow 2 minutes per command
+          timeout: 120000
+          log-level: standard
           # Folder on GoDaddy where the site lives (usually public_html/)
           server-dir: ${{ secrets.FTP_SERVER_DIR }}
           exclude: |
